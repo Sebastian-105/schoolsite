@@ -1,0 +1,214 @@
+@import url('./universal.css');
+
+/* Default theme */
+body[theme='default'] {
+  --shadowColor: #c3c3c33f;
+  --secondaryColor: #292929;
+  --primaryColor: #191919;
+  --bgElement: #2a2a2a; /* This is used for menus */
+  --backgroundColorForElements: rgba(
+    43,
+    43,
+    43,
+    1
+  ); /* This is used for elements*/
+  --tertiaryColor: #525252;
+  --primaryFontColor: white;
+  --decoration: #2564cf;
+  --brighterDeco: #78bafd;
+  --decoBorder: #024caa;
+  --decoration2: #c03bc4;
+  --boxShadow: rgba(255, 255, 255, 0.2);
+  --fontFamily: 'Consolas', monospace;
+  --secondary-font-color: #fff;
+  --primaryFontSize: 16px;
+  --elementBackground: #00a9e2;
+  --primaryBorderColor: solid 1px #111;
+  --primaryGradient: linear-gradient(#555, #111);
+  --primaryMenuColor: #262626;
+  --contrast: #ffffff;
+  --linkColor: #525252;
+
+  --subFontColor: lightgrey;
+  --rGradient: radial-gradient(circle, #555, #111);
+
+  margin: 0px;
+}
+
+/* High Contrast theme */
+body[theme='highContrast'] {
+  --secondaryColor: #000;
+  --primaryColor: #000;
+  --tertiaryColor: #999999;
+  --primaryFontColor: #fff;
+  --decoration: #ff0;
+  --fontFamily: 'Consolas', monospace;
+  --secondary-font-color: #000;
+  --primaryFontSize: 18px;
+  --elementBackground: #000;
+  --primaryBorderColor: solid 2px #fff;
+  --primaryGradient: linear-gradient(#000, #333);
+  --primaryMenuColor: #000;
+  --contrast: #ffffff;
+  --subFontColor: #fff;
+  --rGradient: radial-gradient(circle, #000, #333);
+
+  margin: 0px;
+}
+
+/* Light theme */
+body[theme='light'] {
+  --secondaryColor: #fff;
+  --bgElement: #2a2a2aef; /* This is used for menus */
+  --backgroundColorForElements: rgba(
+    43,
+    43,
+    43,
+    1
+  ); /* This is used for elements*/
+  --primaryColor: #e2dbda;
+  --tertiaryColor: #dddddd;
+  --primaryFontColor: #000;
+  --decoration: #0067b8;
+  --decoBorder: #004d88;
+  --decoration2: #c03bc4;
+  --fontFamily: 'Consolas', monospace;
+  --secondary-font-color: #000;
+  --primaryFontSize: 14px;
+  --elementBackground: #f0f0f0;
+  --primaryBorderColor: solid 1px #eee;
+  --primaryGradient: linear-gradient(#fff, #ccc);
+  --primaryMenuColor: #e0e0e0;
+  --contrast: #646464;
+  --subFontColor: #292929;
+  --rGradient: radial-gradient(circle, #fff, #ccc);
+
+  margin: 0px;
+}
+/* Retro Theme */
+body[theme='retro'] {
+  --secondaryColor: #ff6f61;
+  --primaryColor: #f7b7a3;
+  --tertiaryColor: #ff6f61;
+  --bgElement: #ffccbc; /* This is used for menus */
+  --backgroundColorForElements: rgba(
+    43,
+    43,
+    43,
+    1
+  ); /* This is used for elements*/
+  --primaryFontColor: #111;
+  --boxShadow: #7a5a5644;
+  --decoration: #893f74;
+  --decoBorder: #952977;
+  --fontFamily: 'Consolas', monospace;
+  --secondary-font-color: #555;
+  --primaryFontSize: 18px;
+  --elementBackground: #f8f1e5;
+  --primaryBorderColor: solid 2px #ff6f61;
+  --primaryGradient: linear-gradient(#ffcc00, #ff6f61);
+  --primaryMenuColor: #ff6f61;
+  --contrast: #333;
+  --subFontColor: #252525;
+  --rGradient: radial-gradient(circle, #ff6f61, #f7b7a3);
+
+  margin: 0px;
+}
+/* Ocean Theme */
+body[theme='ocean'] {
+  --secondaryColor: #005282;
+  --primaryColor: #0077be;
+  --tertiaryColor: #46c1ff;
+  --primaryFontColor: #ffffff;
+  --bgElement: #008dde; /* This is used for menus */
+  --backgroundColorForElements: rgba(43, 43, 43, 1);
+  --decoration: #00d463;
+  --fontFamily: 'Consolas', monospace;
+  --secondary-font-color: #e0f7fa;
+  --primaryFontSize: 16px;
+  --elementBackground: #004d40;
+  --boxShadow: #03204939;
+  --primaryBorderColor: solid 1px #00bcd4;
+  --primaryGradient: linear-gradient(#0077be, #004d40);
+  --primaryMenuColor: #0077be;
+  --contrast: #ffffff;
+  --subFontColor: #b2dfdb;
+  --rGradient: radial-gradient(circle, #0077be, #004d40);
+
+  margin: 0px;
+}
+/* Warm Sunset Theme */
+body[theme='sunset'] {
+  --secondaryColor: #ff5733;
+  --primaryColor: #ffb347;
+  --tertiaryColor: #ffc879;
+  --bgElement: rgb(253, 203, 133); /* This is used for menus */
+  --backgroundColorForElements: rgba(
+    43,
+    43,
+    43,
+    1
+  ); /* This is used for elements*/
+  --primaryFontColor: #fff;
+  --decoration: #ff6f61;
+  --decoBorder: #cf5b51;
+  --fontFamily: 'Georgia', serif;
+  --secondary-font-color: #ffebcd;
+  --primaryFontSize: 17px;
+  --elementBackground: #ff6347;
+  --primaryBorderColor: solid 2px #ff5733;
+  --primaryGradient: linear-gradient(#ff5733, #ffb347);
+  --primaryMenuColor: #ff5733;
+  --contrast: #fff;
+  --subFontColor: #f0e6d6;
+  --rGradient: radial-gradient(circle, #ff5733, #c70039);
+
+  margin: 0px;
+}
+/* green Theme */
+body[theme='green'],
+body[theme='forest'] {
+  --secondaryColor: #004c0a;
+  --primaryColor: #1c6000;
+  --tertiaryColor: #1fea00;
+  --linkColor: #2bfe0bd9;
+  --primaryFontColor: #f0f0f0;
+  --bgElement: rgb(26, 162, 55); /* This is used for menus */
+  --backgroundColorForElements: rgba(
+    43,
+    43,
+    43,
+    1
+  ); /* This is used for elements*/
+  --decoration: #419873;
+  --decoBorder: #317256;
+  --secondary-font-color: #e0e0e0;
+  --boxShadow: #004d254c;
+  --primaryFontSize: 16px;
+  --elementBackground: #333333;
+  --primaryBorderColor: solid 2px #666666;
+  --primaryGradient: linear-gradient(#333333, #666666);
+  --primaryMenuColor: #333333;
+  --contrast: #eaeaea;
+  --subFontColor: #b0b0b0;
+  --rGradient: radial-gradient(circle, #333333, #666666);
+  margin: 0px;
+}
+body[theme='mint'] {
+  --secondaryColor: #98ff98; /* Mint Green */
+  --primaryColor: #7cd17c;
+  --tertiaryColor: #a0dea0;
+  --primaryFontColor: #111; /* Darker contrast for mint */
+  --decoration: #98ff98; /* Mint Green */
+  --fontFamily: 'Consolas', monospace;
+  --secondary-font-color: #111; /* Darker font color */
+  --primaryFontSize: 16px;
+  --elementBackground: #98ff98; /* Mint Green */
+  --primaryBorderColor: solid 1px #111; /* Dark border */
+  --primaryGradient: linear-gradient(#98ff98, #4b4b4b);
+  --primaryMenuColor: #4b4b4b;
+  --contrast: #111;
+  --subFontColor: lightgrey;
+  --rGradient: radial-gradient(circle, #98ff98, #111);
+  margin: 0px;
+}

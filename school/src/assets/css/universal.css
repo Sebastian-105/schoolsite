@@ -67,11 +67,10 @@ navbar {
   top:0px;
   height:7.85vh;
   z-index: 999999999;
-  position:absolute;
+  position:fixed;
   transition: all 500ms;
   background-color: var(--secondaryColor);
   opacity: 1;
-  justify-content: center;
   display: flex;
   align-items: center;
 
@@ -187,4 +186,25 @@ subtext {
   .navbar .nav-link {
     margin: 8px 0;
   }
+}
+.leftNav {
+  width:100px;
+  
+  margin-left:25px;
+  margin-right:25px;
+  text-align: left; 
+}
+.centerNav {
+  width:auto;
+  place-self: center;
+  margin-right:25px;
+  margin-left:25px;
+  text-align: center; 
+}
+.rightNav {
+  margin-left:25px;
+  width:auto;
+  right:25px;
+  position: absolute;
+  text-align: right; 
 }

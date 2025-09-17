@@ -9,11 +9,12 @@ export default function Universal() {
     <navbar
     id="navbar">
        <div className='leftNav'>
-          <Link className="nav-link" to="https://sebastian-105.com">
-            <img src="https://sebastian-105.com/105.png" style={{ width: '35%', height: '35%', borderRadius: '50%', marginTop:'7px'}} alt="description" />
+          <Link id="left-link"className="nav-link" to="https://sebastian-105.com" style={{display: 'flex', alignItems: "center", verticalAlign: 'middle', padding: '0px', backgroundColor: 'none !important'}}>
+            <img src="/105.png" style={{borderRadius: '50%'}} alt="105" /> 
+            <span>&nbsp;&nbsp;Sebastian</span>
           </Link>
           </div>
-          <div className='rightNav'>
+          <div className='centerNav'>
           <Link className="nav-link" to="/todo">Todo</Link>
           <Link className="nav-link" to="/assignmentTracker">Assignment Tracker</Link>
           <Link className="nav-link" to="/schedule">Schedule</Link>

@@ -30,6 +30,7 @@
   --decoBorder: #024caa;
   --decoration2: #c03bc4;
   --boxShadow: rgba(255, 255, 255, 0.2);
+  --boxShadowContrast: rgba(1, 1, 1, 0.2);
   --secondary-font-color: #fff;
   --primaryFontSize: 16px;
   --elementBackground: #00a9e2;
@@ -59,12 +60,12 @@
   display:none
 }
 navbar {
-  width:100%; /* makes the edges show, make it just 100% if u don't want them to show*/
+  width:80%; /* makes the edges show, make it just 100% if u don't want them to show*/
   left:50%;
   transform: translateX(-50%);
   /* border:solid 1px white; */  /*Used for testing*/
-  box-shadow: 12px 0px 25px 10px var(--boxShadow);
-  top:0px;
+  box-shadow: 12px 0px 25px 10px var(--boxShadowContrast);
+  top:5px;
   height:7.85vh;
   z-index: 999999999;
   position:fixed;
@@ -73,8 +74,45 @@ navbar {
   opacity: 1;
   display: flex;
   align-items: center;
+  border-radius:10px;
 
 }
+.leftNav {
+  width:10%;
+  margin-left: -10px;
+  text-align: left; 
+}
+.leftNav img {
+  width:50%;
+  height:50%;
+}
+.leftNav span {
+  font-weight: 850;
+  font-size: 20px;
+
+}
+.leftNav span:hover {
+  font-weight: 1000;
+}
+.leftNav a:hover {
+  text-decoration: none;
+  color: var(--linkColor) !important; 
+  font-weight: 1000 !important;
+}
+
+.centerNav {
+  position: absolute; /* or fixed, relative as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rightNav {
+  margin-left:25px;
+  width:auto;
+  right:25px;
+  position: absolute;
+  text-align: right; 
+}
+
 footer {
   width:100%; /* makes the edges show, make it just 100% if u don't want them to show*/
   left:50%;
@@ -108,20 +146,34 @@ footer {
   }
 }
 .nav-link{
-  font-weight: 500;
+  font-weight: 750;
   font-size: 20px;
   color: var(--linkColor);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.5s;
+  margin-left: 25px;
+  width: auto;
+  padding:10px;
+  background-color: transparent; /* or your default background */
+  border-radius: 14px;
+  margin-right: 25px;
 }
 .nav-link:hover {
-    color: var(--decoration);
-
+   color: var(--decoration);
+   font-weight: 1000;
+   background-color: var(--shadowColor);
+   
+}
+#left-link:hover {
+  color: var(--decoration);
+  font-weight: 1000;
+  background-color: transparent;
 }
 a {
-  font-weight: 500;
+  font-weight: 850;
   color: #646cff;
   text-decoration: inherit;
+
 }
 a:hover {
   color: #535bf2;
@@ -186,25 +238,4 @@ subtext {
   .navbar .nav-link {
     margin: 8px 0;
   }
-}
-.leftNav {
-  width:100px;
-  
-  margin-left:25px;
-  margin-right:25px;
-  text-align: left; 
-}
-.centerNav {
-  width:auto;
-  place-self: center;
-  margin-right:25px;
-  margin-left:25px;
-  text-align: center; 
-}
-.rightNav {
-  margin-left:25px;
-  width:auto;
-  right:25px;
-  position: absolute;
-  text-align: right; 
 }

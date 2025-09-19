@@ -1,241 +1,138 @@
 @import url(./themes.css);
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Varibles */
-  --shadowColor: #c3c3c33f;
-  --secondaryColor: #343434;
-  --primaryColor: #191919;
-  --bgElement: #2a2a2a; /* This is used for menus */
-  --backgroundColorForElements: rgba(
-    43,
-    43,
-    43,
-    1
-  ); /* This is used for elements*/
-  --tertiaryColor: #525252;
-  --primaryFontColor: white;
-  --decoration: #2564cf;
-  --brighterDeco: #78bafd;
-  --decoBorder: #024caa;
-  --decoration2: #c03bc4;
-  --boxShadow: rgba(255, 255, 255, 0.2);
-  --boxShadowContrast: rgba(1, 1, 1, 0.2);
-  --secondary-font-color: #fff;
-  --primaryFontSize: 16px;
-  --elementBackground: #00a9e2;
-  --primaryBorderColor: solid 1px #111;
-  --primaryGradient: linear-gradient(#555, #111);
-  --primaryMenuColor: #262626;
-  --contrast: #ffffff;
-  --linkColor: #cfcfcf;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* Varibles */
+	--shadowColor: #c3c3c33f;
+	--secondaryColor: #343434;
+	--primaryColor: #191919;
+	--bgElement: #2a2a2a; /* This is used for menus */
+	--backgroundColorForElements: rgba(43, 43, 43, 1); /* This is used for elements*/
+	--tertiaryColor: #525252;
+	--primaryFontColor: white;
+	--decoration: #2564cf;
+	--brighterDeco: #78bafd;
+	--decoBorder: #024caa;
+	--decoration2: #c03bc4;
+	--boxShadow: rgba(255, 255, 255, 0.2);
+	--boxShadowContrast: rgba(1, 1, 1, 0.2);
+	--secondary-font-color: #fff;
+	--primaryFontSize: 16px;
+	--elementBackground: #00a9e2;
+	--primaryBorderColor: solid 1px #111;
+	--primaryGradient: linear-gradient(#555, #111);
+	--primaryMenuColor: #262626;
+	--contrast: #ffffff;
+	--linkColor: #cfcfcf;
 
-  --subFontColor: lightgrey;
-  --rGradient: radial-gradient(circle, #555, #111);
+	--subFontColor: lightgrey;
+	--rGradient: radial-gradient(circle, #555, #111);
 
-  margin: 0px;
+	margin: 0px;
 }
-#root{ /* this is the same as body, because all of react is put in the #root section*/
-  margin:0px;
-  padding-top: 10vh;
-  padding:0px;
-  place-content: center;
-  margin: 0 auto;
-  padding: 2rem;
-  padding-top: 8vh;
-  text-align: center;
-  
+#root {
+	/* this is the same as body, because all of react is put in the #root section*/
+	margin: 0px;
+	padding-top: 10vh;
+	padding: 0px;
+	place-content: center;
+	margin: 0 auto;
+	padding: 2rem;
+	padding-top: 8vh;
+	text-align: center;
 }
-*::-webkit-scrollbar  {
-  display:none
-}
-navbar {
-  width:80%; /* makes the edges show, make it just 100% if u don't want them to show*/
-  left:50%;
-  transform: translateX(-50%);
-  /* border:solid 1px white; */  /*Used for testing*/
-  box-shadow: 12px 0px 25px 10px var(--boxShadowContrast);
-  top:5px;
-  height:7.85vh;
-  z-index: 999999999;
-  position:fixed;
-  transition: all 500ms;
-  background-color: var(--secondaryColor);
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  border-radius:10px;
-
-}
-.leftNav {
-  width:10%;
-  margin-left: -10px;
-  text-align: left; 
-}
-.leftNav img {
-  width:50%;
-  height:50%;
-}
-.leftNav span {
-  font-weight: 850;
-  font-size: 20px;
-
-}
-.leftNav span:hover {
-  font-weight: 1000;
-}
-.leftNav a:hover {
-  text-decoration: none;
-  color: var(--linkColor) !important; 
-  font-weight: 1000 !important;
+*::-webkit-scrollbar {
+	display: none;
 }
 
-.centerNav {
-  position: absolute; /* or fixed, relative as needed */
-  left: 50%;
-  transform: translateX(-50%);
-}
-.rightNav {
-  margin-left:25px;
-  width:auto;
-  right:25px;
-  position: absolute;
-  text-align: right; 
-}
-
-footer {
-  width:100%; /* makes the edges show, make it just 100% if u don't want them to show*/
-  left:50%;
-  transform: translateX(-50%);
-  /* border:solid 1px white; */  /*Used for testing*/
-  bottom:0px;
-  height:auto;
-  z-index: 999999999;
-  position:fixed;
-  background-color: var(--secondaryColor);
-  opacity: 1;
-}
-
-/* navbar:hover {
-  opacity: 1;
-} */
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-.nav-link{
-  font-weight: 750;
-  font-size: 20px;
-  color: var(--linkColor);
-  text-decoration: none;
-  transition: all 0.5s;
-  margin-left: 25px;
-  width: auto;
-  padding:10px;
-  background-color: transparent; /* or your default background */
-  border-radius: 14px;
-  margin-right: 25px;
-}
-.nav-link:hover {
-   color: var(--decoration);
-   font-weight: 1000;
-   background-color: var(--shadowColor);
-   
-}
-#left-link:hover {
-  color: var(--decoration);
-  font-weight: 1000;
-  background-color: transparent;
-}
-a {
-  font-weight: 850;
-  color: #646cff;
-  text-decoration: inherit;
 
+a {
+	font-weight: 850;
+	color: #646cff;
+	text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+	color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	font-size: 3.2em;
+	line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.2s;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: all 0.5s;
 }
 button:hover {
-  border-color: var(--decoBorder);
-  background-color: #222;
+	color: var(--brighterDeco);
+	background-color: var(--shadowColor);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:focus {
+	outline: 0 !important;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
 }
 subtext {
-  font-size: 15px;
-  color: lightgrey;
-  font-weight: bold;
+	font-size: 15px;
+	color: lightgrey;
+	font-weight: bold;
 }
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-  }
-  .navbar .nav-link {
-    margin: 8px 0;
-  }
+.contentBox {
+	background: var(--secondaryColor);
+	background: linear-gradient(321deg, rgba(52, 52, 52, 1) 0%, rgba(65, 65, 65, 1) 100%);
+	border-radius: 15px;
+	box-shadow: inset 12px 0px 25px 10px var(--boxShadowContrast), 0px 0px 2.5px white;
 }

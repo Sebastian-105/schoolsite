@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../assets/css/universal.css'
+import '../assets/css/navbar.css'
 import { Link } from 'react-router-dom';
 
 export default function Universal() {
